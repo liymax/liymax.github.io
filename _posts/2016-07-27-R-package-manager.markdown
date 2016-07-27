@@ -37,3 +37,13 @@ update.packages()
 remove.packages(c("pkg1","pkg2") , lib = file.path("library path"))
 {% endhighlight %}
 > 删除指定的软件包。
+
+# reference
+
+[R语言入门视频][R语言入门视频]   
+[R语言官网][R语言官网]    
+[R语言基础教程][R语言基础教程]
+
+[R语言入门视频]: http://www.imooc.com/u/2130096/courses?sort=publish
+[R语言官网]: https://www.r-project.org/
+[R语言基础教程]: http://www.yiibai.com/r/r_matrices.html
