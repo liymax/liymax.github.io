@@ -2,7 +2,7 @@
 layout: post
 title:  "R语言的包管理"
 date:   2016-07-27 15:52:28 +0800
-categories: language study
+categories: language-study
 ---
 
 R语言的包管理是非常方便的，其本身就是语言的一部分。
