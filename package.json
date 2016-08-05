@@ -1,0 +1,18 @@
+{
+  "name": "myblog",
+  "version": "1.0.0",
+  "description": "github page",
+  "scripts": {
+    "start": "jekyll serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/himiten/himiten.github.io.git"
+  },
+  "author": "himiten",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/himiten/himiten.github.io/issues"
+  },
+  "homepage": "https://github.com/himiten/himiten.github.io#readme"
+}
