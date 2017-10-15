@@ -18,7 +18,7 @@ export default class extends React.Component{
 				<li><a href="/public/about">about</a></li>
 				<li><a href="/public/readme">readme</a></li>
 			</ul>
-			<script src="/static/_test/test.js"/>
+			<script src="/static/test/test.js"/>
 		</div>
 	}
 }
