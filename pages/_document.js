@@ -17,7 +17,7 @@ export default class extends Document {
 			</Head>
 			<body>
 				<Main />
-				<NextScript assetPrefix={process.env.NODE_ENV === 'production'?"/public/":""}/>
+				<NextScript />
 			</body>
 			</html>
 		)

@@ -1,5 +1,7 @@
 
 module.exports = {
+	assetPrefix: process.env.NODE_ENV === 'production'?"/public/":"",
+
 	exportPathMap: function() {
 		return {
 			'/': { page: '/' },
