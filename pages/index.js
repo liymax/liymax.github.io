@@ -14,11 +14,11 @@ export default class extends React.Component{
 	render(){
 		let {count}=this.props;
 		return <div>
-			<label>{count}</label><button onClick={()=>this.props.count+=1} >+1</button>
+			<label>{count}</label><button onClick={action(()=>this.props.count+=1)} >+1</button>
 			<img src="/static/demo.png"/>
 			<ul>
 				<li><a href="/public/about">about</a></li>
-				<li><a href="readme">readme</a></li>
+				<li><a href="/public/readme">readme</a></li>
 			</ul>
 		</div>
 	}
