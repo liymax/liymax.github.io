@@ -14,7 +14,7 @@ export default class extends Document {
 			<html>
 			<Head>
 				<style jsx>{`body { margin: 0 } `}</style>
-				<link  rel="preload" href="/static/test/test.js" as="script"/>
+				<script type="text/javascript" src="/static/loadscript.js" />
 			</Head>
 			<body>
 				<Main />
