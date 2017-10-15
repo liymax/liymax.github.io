@@ -1,18 +1,24 @@
 {
-  "name": "myblog",
+  "name": "webblog",
   "version": "1.0.0",
   "description": "github page",
   "scripts": {
-    "start": "jekyll serve"
+    "dev": "next",
+    "export": "next build && next export",
+    "build": "next build",
+    "start": "next start"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/himiten/himiten.github.io.git"
-  },
+  "repository": "git+https://github.com/himiten/himiten.github.io.git",
   "author": "himiten",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/himiten/himiten.github.io/issues"
   },
-  "homepage": "https://github.com/himiten/himiten.github.io#readme"
+  "homepage": "https://github.com/himiten/himiten.github.io#readme",
+  "main": "index.js",
+  "dependencies": {
+    "next": "^4.0.4",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
 }
