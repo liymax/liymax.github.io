@@ -4,7 +4,7 @@ module.exports = {
 		return {
 			'/': { page: '/' },
 			'/about': { page: '/about' },
-			'/readme.md': { page: '/readme' },
+			'/readme': { page: '/readme' },
 		}
 	}
 };
