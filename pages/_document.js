@@ -14,6 +14,7 @@ export default class extends Document {
 			<html>
 			<Head>
 				<style jsx>{`body { margin: 0 } `}</style>
+				<script src="/static/test.js"/>
 			</Head>
 			<body>
 				<Main />
