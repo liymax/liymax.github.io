@@ -9,6 +9,7 @@ export default class extends React.Component{
 		return {}
 	}
 
+
 	render(){
 		return <div>
 			<label>{this.clickCount}</label><button onClick={()=>this.clickCount+=1} >+1</button>

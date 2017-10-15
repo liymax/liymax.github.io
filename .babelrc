@@ -16,6 +16,7 @@
       "polyfill": false,
       "regenerator": true,
       "moduleName": "babel-runtime"
-    }]
+    }],
+    ["styled-jsx/babel", { "optimizeForSpeed": true }]
   ]
 }
