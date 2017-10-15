@@ -4,7 +4,8 @@
   "description": "github page",
   "scripts": {
     "dev": "next",
-    "export": "next build && next export",
+    "export build": "next build && next export -o public",
+    "export help": "next export -h",
     "build": "next build",
     "start": "next start"
   },
