@@ -6,8 +6,9 @@
     "dev": "next",
     "export build": "cross-env NODE_ENV=production next build && next export -o public",
     "export help": "next export -h",
-    "build": "next build",
-    "start": "next start"
+    "build-next": "next build",
+    "start-next": "next start",
+    "webpack": "cross-env NODE_ENV=production webpack --progress --colors"
   },
   "repository": "git+https://github.com/himiten/himiten.github.io.git",
   "author": "himiten",
@@ -35,6 +36,11 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
-    "cross-env": "^5.0.5"
+    "cross-env": "^5.0.5",
+    "gulp": "^3.9.1",
+    "gulp-git": "^2.4.2",
+    "html-webpack-include-assets-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.8.1"
   }
 }
