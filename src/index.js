@@ -6,10 +6,12 @@ import { observable,action,computed,autorun,reaction } from 'mobx';
 @observer
 class App extends React.Component{
 	@observable clickCount = 0;
-	static async getInitialProps() {
-		return {}
-	}
+	constructor(props){
+		super(props);
+		this.state={
 
+		}
+	}
 	render(){
 		return <div>
 			<label>{this.clickCount}</label><button onClick={()=>this.clickCount+=1} >+1</button>
