@@ -14,8 +14,3 @@ gulp.task('commit',['add'], function(){
 		}));
 });
 
-gulp.task('push', function(){
-	git.push('origin', 'master', {args: " -f"}, function (err) {
-		if (err) throw err;
-	});
-});
