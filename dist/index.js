@@ -1,34 +1,34 @@
 webpackJsonp([0],{
 
-/***/ 47:
+/***/ 171:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(261);
+__webpack_require__(172);
 
-__webpack_require__(48);
+__webpack_require__(374);
 
-var _react = __webpack_require__(2);
+var _react = __webpack_require__(23);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(15);
+var _reactDom = __webpack_require__(78);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _mobxReact = __webpack_require__(16);
+var _mobxReact = __webpack_require__(107);
 
-var _Article = __webpack_require__(49);
+var _Article = __webpack_require__(375);
 
 var _Article2 = _interopRequireDefault(_Article);
 
-var _ShowState = __webpack_require__(54);
+var _ShowState = __webpack_require__(380);
 
 var _ShowState2 = _interopRequireDefault(_ShowState);
 
-var _main = __webpack_require__(55);
+var _main = __webpack_require__(381);
 
 var _main2 = _interopRequireDefault(_main);
 
@@ -51,7 +51,7 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.get
 
 /***/ }),
 
-/***/ 49:
+/***/ 375:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66,9 +66,9 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _dec, _dec2, _desc, _value, _class, _descriptor, _descriptor2;
 
-var _mobx = __webpack_require__(10);
+var _mobx = __webpack_require__(59);
 
-var _fetchkit = __webpack_require__(50);
+var _fetchkit = __webpack_require__(376);
 
 function _initDefineProp(target, property, descriptor, context) {
 	if (!descriptor) return;
@@ -131,7 +131,7 @@ var Article = (_dec = _mobx.action.bound, _dec2 = _mobx.action.bound, (_class = 
 		value: function initContent() {
 			var _this = this;
 
-			var url = '/docs/myPoems.md';
+			var url = '/docs/poems.md';
 			(0, _fetchkit.doGetText)(url, function (text) {
 				_this.content = text;
 			});
@@ -153,7 +153,7 @@ var Article = (_dec = _mobx.action.bound, _dec2 = _mobx.action.bound, (_class = 
 }(), (_descriptor = _applyDecoratedDescriptor(_class.prototype, "name", [_mobx.observable], {
 	enumerable: true,
 	initializer: function initializer() {
-		return 'myPoems';
+		return 'poems';
 	}
 }), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, "content", [_mobx.observable], {
 	enumerable: true,
@@ -165,7 +165,7 @@ exports.default = Article;
 
 /***/ }),
 
-/***/ 50:
+/***/ 376:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -174,14 +174,21 @@ exports.default = Article;
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.doGetText = undefined;
 
-var _regenerator = __webpack_require__(51);
+var _regenerator = __webpack_require__(377);
 
 var _regenerator2 = _interopRequireDefault(_regenerator);
 
-var doGetText = exports.doGetText = function () {
-	var _ref = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee(url, success, fail) {
+exports.doGetText = doGetText;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
+function doGetText(url, success, fail) {
+	var _this = this;
+
+	_asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
 		var res, text;
 		return _regenerator2.default.wrap(function _callee$(_context) {
 			while (1) {
@@ -214,21 +221,13 @@ var doGetText = exports.doGetText = function () {
 						return _context.stop();
 				}
 			}
-		}, _callee, this, [[0, 10]]);
-	}));
-
-	return function doGetText(_x, _x2, _x3) {
-		return _ref.apply(this, arguments);
-	};
-}();
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+		}, _callee, _this, [[0, 10]]);
+	}))();
+}
 
 /***/ }),
 
-/***/ 54:
+/***/ 380:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -241,9 +240,9 @@ exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _dec, _dec2, _desc, _value, _class, _descriptor, _descriptor2;
+var _dec, _desc, _value, _class, _descriptor, _descriptor2;
 
-var _mobx = __webpack_require__(10);
+var _mobx = __webpack_require__(59);
 
 function _initDefineProp(target, property, descriptor, context) {
 	if (!descriptor) return;
@@ -290,7 +289,7 @@ function _initializerWarningHelper(descriptor, context) {
 	throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
 }
 
-var ShowState = (_dec = _mobx.action.bound, _dec2 = _mobx.action.bound, (_class = function () {
+var ShowState = (_dec = _mobx.action.bound, (_class = function () {
 	function ShowState() {
 		_classCallCheck(this, ShowState);
 
@@ -303,13 +302,7 @@ var ShowState = (_dec = _mobx.action.bound, _dec2 = _mobx.action.bound, (_class 
 		key: 'selectShowId',
 		value: function selectShowId(id) {
 			this.showId = id;
-		}
-	}, {
-		key: 'recordRenderedIds',
-		value: function recordRenderedIds(id) {
-			if (!this.renderedIds.includes(id)) {
-				this.renderedIds.push(id);
-			}
+			!this.renderedIds.includes(id) && this.renderedIds.push(id);
 		}
 	}]);
 
@@ -324,12 +317,12 @@ var ShowState = (_dec = _mobx.action.bound, _dec2 = _mobx.action.bound, (_class 
 	initializer: function initializer() {
 		return ['home'];
 	}
-}), _applyDecoratedDescriptor(_class.prototype, 'selectShowId', [_dec], Object.getOwnPropertyDescriptor(_class.prototype, 'selectShowId'), _class.prototype), _applyDecoratedDescriptor(_class.prototype, 'recordRenderedIds', [_dec2], Object.getOwnPropertyDescriptor(_class.prototype, 'recordRenderedIds'), _class.prototype)), _class));
+}), _applyDecoratedDescriptor(_class.prototype, 'selectShowId', [_dec], Object.getOwnPropertyDescriptor(_class.prototype, 'selectShowId'), _class.prototype)), _class));
 exports.default = ShowState;
 
 /***/ }),
 
-/***/ 55:
+/***/ 381:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -344,17 +337,17 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _dec, _class;
 
-var _react = __webpack_require__(2);
+var _react = __webpack_require__(23);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _mobxReact = __webpack_require__(16);
+var _mobxReact = __webpack_require__(107);
 
-var _home = __webpack_require__(56);
+var _home = __webpack_require__(382);
 
 var _home2 = _interopRequireDefault(_home);
 
-var _article = __webpack_require__(57);
+var _article = __webpack_require__(383);
 
 var _article2 = _interopRequireDefault(_article);
 
@@ -366,7 +359,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var _default = (_dec = (0, _mobxReact.inject)('article', 'showState'), _dec(_class = (0, _mobxReact.observer)(_class = function (_React$Component) {
+var _default = (_dec = (0, _mobxReact.inject)('showState'), _dec(_class = (0, _mobxReact.observer)(_class = function (_React$Component) {
 	_inherits(_default, _React$Component);
 
 	function _default() {
@@ -392,11 +385,7 @@ var _default = (_dec = (0, _mobxReact.inject)('article', 'showState'), _dec(_cla
 	}, {
 		key: "render",
 		value: function render() {
-			var _props = this.props,
-			    article = _props.article,
-			    showState = _props.showState;
-
-			console.log(article);
+			var showState = this.props.showState;
 			var renderedIds = showState.renderedIds;
 
 			return _react2.default.createElement(
@@ -415,7 +404,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 56:
+/***/ 382:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -428,9 +417,13 @@ exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(2);
+var _dec, _class;
+
+var _react = __webpack_require__(23);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _index = __webpack_require__(463);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -440,10 +433,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-//import {observer,Provider,inject} from 'mobx-react';
-//import ReactMarkdown from 'react-markdown';
-
-var _default = function (_React$Component) {
+var _default = (_dec = (0, _index.inject)('showState', 'article'), _dec(_class = (0, _index.observer)(_class = function (_React$Component) {
 	_inherits(_default, _React$Component);
 
 	function _default() {
@@ -453,11 +443,23 @@ var _default = function (_React$Component) {
 	}
 
 	_createClass(_default, [{
+		key: "shiftToSomeArticle",
+		value: function shiftToSomeArticle(name) {
+			var _props = this.props,
+			    showState = _props.showState,
+			    article = _props.article;
+
+			showState.selectShowId('article');
+			article.loadContentByName(name);
+		}
+	}, {
 		key: "render",
 		value: function render() {
+			var style = this.props.style;
+
 			return _react2.default.createElement(
 				"div",
-				null,
+				{ style: style },
 				_react2.default.createElement(
 					"h2",
 					null,
@@ -474,8 +476,17 @@ var _default = function (_React$Component) {
 							null,
 							_react2.default.createElement(
 								"a",
-								null,
+								{ onClick: this.shiftToSomeArticle.bind(this, 'poems') },
 								"\u81F4\u656C\u6211\u4EEC\u4F1F\u5927\u7684\u53E4\u4EE3\u8BD7\u4EBA"
+							)
+						),
+						_react2.default.createElement(
+							"li",
+							null,
+							_react2.default.createElement(
+								"a",
+								{ onClick: this.shiftToSomeArticle.bind(this, 'css3-3d') },
+								"\u5173\u4E8Ecss3\u76843d\u6548\u679C\u7684\u4E00\u4E9B\u6478\u7D22"
 							)
 						)
 					)
@@ -485,13 +496,13 @@ var _default = function (_React$Component) {
 	}]);
 
 	return _default;
-}(_react2.default.Component);
+}(_react2.default.Component)) || _class) || _class);
 
 exports.default = _default;
 
 /***/ }),
 
-/***/ 57:
+/***/ 383:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -506,13 +517,13 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _dec, _class;
 
-var _react = __webpack_require__(2);
+var _react = __webpack_require__(23);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _mobxReact = __webpack_require__(16);
+var _mobxReact = __webpack_require__(107);
 
-var _reactMarkdown = __webpack_require__(58);
+var _reactMarkdown = __webpack_require__(384);
 
 var _reactMarkdown2 = _interopRequireDefault(_reactMarkdown);
 
@@ -536,9 +547,15 @@ var _default = (_dec = (0, _mobxReact.inject)('article'), _dec(_class = (0, _mob
 	_createClass(_default, [{
 		key: 'render',
 		value: function render() {
-			var article = this.props.article;
+			var _props = this.props,
+			    article = _props.article,
+			    style = _props.style;
 
-			return _react2.default.createElement(_reactMarkdown2.default, { source: article.content });
+			return _react2.default.createElement(
+				'div',
+				{ style: style },
+				_react2.default.createElement(_reactMarkdown2.default, { source: article.content })
+			);
 		}
 	}]);
 
@@ -549,5 +566,5 @@ exports.default = _default;
 
 /***/ })
 
-},[47]);
+},[171]);
 //# sourceMappingURL=index.js.map

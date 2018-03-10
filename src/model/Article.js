@@ -1,7 +1,7 @@
 import { observable,action } from "mobx";
 import {doGetText} from "src/utils/fetchkit"
 export default class Article{
-	@observable name='myPoems';
+	@observable name='poems';
 	@observable content='';
 
 	constructor(){
@@ -10,7 +10,7 @@ export default class Article{
 
 	@action.bound
 	initContent(){
-		let url='/docs/myPoems.md';
+		let url='/docs/poems.md';
 		doGetText(url,(text)=>{
 			this.content=text;
 		})

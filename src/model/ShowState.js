@@ -6,13 +6,7 @@ export default class ShowState{
 	@action.bound
 	selectShowId(id){
 		this.showId=id;
-	}
-
-
-	@action.bound
-	recordRenderedIds(id){
-		if(!this.renderedIds.includes(id)){
-			this.renderedIds.push(id);
-		}
+		!this.renderedIds.includes(id) &&
+		this.renderedIds.push(id)
 	}
 }

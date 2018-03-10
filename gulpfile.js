@@ -7,7 +7,7 @@ gulp.task('add', function(){
 	return gulp.src(gitPaths).pipe(git.add());
 });
 
-gulp.task('commit',['add'], function(){
+gulp.task('commit', function(){
 	return gulp.src(gitPaths).pipe(git.commit(undefined, {
 			args: '-m "auto commit"',
 			disableMessageRequirement: true

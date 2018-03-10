@@ -5,7 +5,9 @@ import ReactMarkdown from 'react-markdown';
 @inject('article') @observer
 export default class extends React.Component{
 	render(){
-		let {article}=this.props;
-		return <ReactMarkdown source={article.content} />
+		let {article,style}=this.props;
+		return <div style={style}>
+			<ReactMarkdown source={article.content} />
+		</div>
 	}
 }

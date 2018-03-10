@@ -3,7 +3,7 @@ import {observer,inject} from 'mobx-react';
 import Home from "src/reactdoc/home";
 import Article from "src/reactdoc/article";
 
-@inject('article','showState') @observer
+@inject('showState') @observer
 export default class extends React.Component{
 
 	componentDidMount(){
@@ -20,8 +20,7 @@ export default class extends React.Component{
 	}
 
 	render(){
-		const {article,showState}=this.props;
-		console.log(article);
+		const {showState}=this.props;
 		let {renderedIds}=showState;
 		return <div>
 			{renderedIds.includes('home') && <Home style={this.getDisplayStyle('home')} />}
