@@ -1,21 +1,49 @@
-// Require the framework and instantiate it
-const fastify = require('fastify')();
-const path = require('path');
-const serveStatic = require('serve-static');
-fastify.use(serveStatic(path.join(__dirname, '/')));
+const http = require("http");
+const fs = require("fs");
+const Koa = require("koa");
+const Router = require("koa-router");
+const gql = require("koa-graphql");
+import { graphql, GraphQLSchema, GraphQLObjectType, GraphQLString, GraphQLInt } from "graphql";
 
+const app = new Koa();
+const logger = require("koa-logger");
+const staticServe = require("koa-static");
+app.use(staticServe(__dirname + "/dist/"));
+app.use(staticServe(__dirname + "/assets/"));
+app.use(logger());
 
-// Declare a route
-fastify.get("/", function (request, reply) {
-	reply.type('text/html');
-	const fs = require('fs');
-	const stream = fs.createReadStream('./dist/index.html', 'utf8');
-	reply.send(stream);
+let router = new Router();
+
+router.get("/", ctx => {
+  try {
+    ctx.body = fs.readFileSync("dist/site/index.html", "utf-8");
+  } catch (e) {
+    ctx.status = "404";
+    ctx.body = " 页面不存在！";
+  }
 });
 
-
-// Run the server!
-fastify.listen(3000, function (err) {
-	if (err) throw err;
-	console.log(`server listening on ${fastify.server.address().port}`)
+const helloSchema = new GraphQLSchema({
+  query: new GraphQLObjectType({
+    name: "RootQueryType",
+    fields: {
+      hello: {
+        type: GraphQLString,
+        resolve() {
+          return "world";
+        }
+      }
+    }
+  })
 });
+
+router.all(
+  "/gql",
+  gql({
+    schema: helloSchema,
+    graphiql: true
+  })
+);
+
+app.use(router.routes());
+http.createServer(app.callback()).listen(8000);

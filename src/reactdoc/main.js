@@ -1,30 +1,30 @@
 import React from "react";
-import {observer,inject} from 'mobx-react';
+import { observer, inject } from "mobx-react";
 import Home from "src/reactdoc/home";
 import Article from "src/reactdoc/article";
 
-@inject('showState') @observer
-export default class extends React.Component{
+@inject("showState")
+@observer
+export default class extends React.Component {
+  componentDidMount() {}
 
-	componentDidMount(){
+  getDisplayStyle(id) {
+    const { showState } = this.props;
+    let { showId } = showState;
+    if (id === showId) {
+      return { display: "block" };
+    }
+    return { display: "none" };
+  }
 
-	}
-
-	getDisplayStyle(id){
-		const {showState}=this.props;
-		let {showId}=showState;
-		if(id===showId){
-			return {display:'block'};
-		}
-		return {display:'none'};
-	}
-
-	render(){
-		const {showState}=this.props;
-		let {renderedIds}=showState;
-		return <div>
-			{renderedIds.includes('home') && <Home style={this.getDisplayStyle('home')} />}
-			{renderedIds.includes('article') && <Article style={this.getDisplayStyle('article')} />}
-		</div>
-	}
+  render() {
+    const { showState } = this.props;
+    let { renderedIds } = showState;
+    return (
+      <div>
+        {renderedIds.includes("home") && <Home style={this.getDisplayStyle("home")} />}
+        {renderedIds.includes("article") && <Article style={this.getDisplayStyle("article")} />}
+      </div>
+    );
+  }
 }

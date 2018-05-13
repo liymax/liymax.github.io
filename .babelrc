@@ -1,22 +1,22 @@
 {
   "presets": [
-    "react",
     ["env", {
       "targets": {
         "browsers": ["last 3 versions", "safari >= 7"]
       }
-    }]
+    }],
+    "react",
+    "stage-0"
   ],
   "plugins": [
     "transform-decorators-legacy",
     "transform-class-properties",
-
+    "syntax-dynamic-import",
     ["transform-runtime", {
       "helpers": false,
       "polyfill": false,
       "regenerator": true,
       "moduleName": "babel-runtime"
-    }],
-    ["styled-jsx/babel", { "optimizeForSpeed": true }]
+    }]
   ]
 }
