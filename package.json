@@ -1,33 +1,34 @@
 {
-  "name": "personalsite",
+  "name": "website",
   "version": "1.0.0",
   "description": "github page",
   "scripts": {
     "koa-server": "node entry.js",
-    "webpack": "webpack --progress --colors",
-    "webpack-prod": "cross-env NODE_ENV=production webpack --progress --colors"
+    "dev": "node hotserver.js"
   },
-  "repository": "git+https://github.com/himiten/himiten.github.io.git",
-  "author": "himiten",
+  "repository": "git+https://github.com/liymax/liymax.github.io.git",
+  "author": "liymax",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/himiten/himiten.github.io/issues"
+    "url": "https://github.com/liymax/liymax.github.io/issues"
   },
-  "homepage": "https://github.com/himiten/himiten.github.io#readme",
+  "homepage": "https://github.com/liymax/liymax.github.io#readme",
   "main": "index.js",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "babel-register": "^6.26.0",
     "babel-runtime": "^6.26.0",
-    "d3": "^4.12.2",
+    "core-js": "^2.5.6",
+    "d3": "^5.4.0",
     "graphql": "^0.13.2",
+    "immer": "^1.3.0",
     "koa": "^2.5.0",
     "koa-graphql": "^0.7.5",
     "koa-logger": "^3.2.0",
     "koa-router": "^7.4.0",
     "koa-static": "^4.0.2",
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
     "react-markdown": "^3.1.3",
     "styled-components": "^3.2.5",
     "whatwg-fetch": "^2.0.3"
@@ -44,12 +45,15 @@
     "babel-preset-stage-0": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
     "cross-env": "^5.0.5",
+    "express": "^4.16.3",
     "gulp": "^4.0.0",
-    "gulp-git": "^2.4.2",
-    "html-webpack-include-assets-plugin": "^1.0.4",
     "html-webpack-plugin": "^3.2.0",
+    "http-proxy-middleware": "^0.18.0",
+    "open-browser-webpack-plugin": "^0.0.5",
     "prettier": "1.12.1",
+    "react-hot-loader": "^4.2.0",
     "webpack": "^4.5.0",
-    "webpack-cli": "^2.0.14"
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.4"
   }
 }

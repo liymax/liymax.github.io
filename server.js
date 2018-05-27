@@ -2,7 +2,8 @@ const http = require("http");
 const fs = require("fs");
 const Koa = require("koa");
 const Router = require("koa-router");
-const gql = require("koa-graphql");
+const graphqlHTTP = require("koa-graphql");
+
 import { graphql, GraphQLSchema, GraphQLObjectType, GraphQLString, GraphQLInt } from "graphql";
 
 const app = new Koa();
@@ -39,7 +40,7 @@ const helloSchema = new GraphQLSchema({
 
 router.all(
   "/gql",
-  gql({
+  graphqlHTTP({
     schema: helloSchema,
     graphiql: true
   })
