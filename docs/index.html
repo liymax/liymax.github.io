@@ -1,70 +1,140 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<title>我的演示文稿</title>
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>我的演示文稿</title>
+	<link rel="stylesheet" href="../css/reveal.css">
+	<link rel="stylesheet" href="../css/theme/white.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="../lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+<div class="reveal">
+	<div class="slides">
 
-		<script type="text/x-mathjax-config">
-			MathJax.Hub.Config({
-				tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]], processEscapes: true},
-				TeX: { equationNumbers: { autoNumber: "AMS" }, extensions: ["autoload-all.js"]	}
-			});
-		</script>
-		<script type="text/javascript" src="MathJax/MathJax.js?config=TeX-AMS_HTML-full"></script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section >
-					<p>In equation \eqref{eq:sample}, we find the value of an interesting integral:</p>
+		<section data-markdown style="text-align: left">
+			<script type="text/template">
+				### 基本信息 <!-- .element: style="font-size:30px;" -->
+				男 ，29岁，本科(2015年毕业)，工作4年 ，现在深圳 <!-- .element: style="font-size:24px;" -->
 
-					\begin{equation}
-						\int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
-						\label{eq:sample}
-					\end{equation}
-				</section>
-				<section>
-					<p>enclose</p>
-					\(
-						\enclose{circle}[mathcolor="red"]{x}
-						\enclose{circle}[mathcolor="red"]{\color{black}{x}}
-						\enclose{circle,box}{x}
-						\enclose{circle}{\enclose{box}{x}}
-					\)		
-				</section>
-				<section>hello</section>
-			</div>
-		</div>
+				专业/院校：信息与计算科学/湖北理工学院 <!-- .element: style="font-size:24px;" -->
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-		
-		<script>
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/math/math.js', async: true },
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', 
-						async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+				手机/邮箱：15172037122/1066761470@qq.com <!-- .element: style="font-size:24px;" -->
+
+				### 工作经历 <!-- .element: style="font-size:30px;" -->
+				2014年下半入职一家小型网络公司(赐云网络有限公司)，正式开始个人的职业开发生涯。
+				和多数刚刚进入开发行业的新人一样，用jquery开发着各种简单的页面，并尝试着各种js库，如kissy、echarts等。
+				渐渐地由懵懂到清晰，从而确定了个人的职业发展方向，于2015年8月离开上海来到深圳。
+				<!-- .element: style="font-size:22px;" -->
+
+				来到深圳后于当年10月份进入一家初创型公司(天行家科技有限公司)，公司前期发展还不错。
+				当时一边用传统的jquery开发网站，一边了解react.js(这也是个人最喜欢的前端框架)，
+				并在部分移动端页面进行了一些试用，效果很理想。于是后来用react重构了公司的客服管理系统，
+				并开发了一个公司数据展示平台，通过这些实践让我对react有了较深认识。后来公司发展遇到瓶颈，
+				于是我与2017年5月离开这家公司。<!-- .element: style="font-size:22px;" -->
+
+				当年6月进入了中软国际(华为外包)，值得庆幸的是这是一个基于react的前端项目，不幸的是这是一个对react并没有多少经验的新手写的。
+				随着业务需求的增加和代码量的增长，这个项目的代码已经难以维护，更别谈扩展。这种情况下重构已经是唯一的选择，但由于交付的压力，
+				最后项目经理只能给我一个月的时间。虽然说这一个月的重构任务有点紧张也很很辛苦，但在技术上也得到丰厚的回报，运用react更加得心应手，
+				能基于react技术栈设计满足复杂业务需求的前端项目架构。后来在另一个移动端项目中更是充分利用之前的技术积累，设计出能同时满足再多
+				环境中交互和ui比较统一的移动项目架构。<!-- .element: style="font-size:22px;" -->
+			</script>
+		</section>
+		<section data-markdown style="text-align: left">
+			<script type="text/template">
+				### 项目经验 <!-- .element: style="font-size:30px;" -->
+				第一年的基于jquery的传统页面开发经验，在当下的前端环境下实在不值一提，这里就主要讲讲基于react的三个项目。
+			  开发环境: IDE(WebStorm),打包(webpack),编译(babel),热加载调试(webpack-dev-server)
+				<!-- .element: style="font-size:24px;" -->
+
+				1.客服管理系统 <!-- .element: style="font-size:24px;" -->
+
+				顾名思义，这是公司内部客服人员使用的一个系统，以便提供给客户更好的服务。这个我的第一个基于react的项目，
+				现在看来这项目做得还是很粗糙的。该项目中组件化做得很不理想，组件的划分很多不是很合理，可重用度不高。
+				其次没用到redux这样的状态管理库，组件间的数据传递和方法调用完全是基于props的逐级传递和ref引用来实现的，
+				使得数据处理和方法调用变得混乱而复杂。最后页面的跳转严重依赖react-router这个库，使得在实现跳转逻辑时
+				难以做到灵活可控。经过对这个项目的反思，让我清晰的认识到自己的很多不足之处，从而给我指明了今后学习和工作的方向。
+				<!-- .element: style="font-size:22px;" -->
+
+				2.Plink项目管理平台 <!-- .element: style="font-size:24px;" -->
+
+				很显然，这是一个用于管理公司项目用的，主要使用者是公司的项目经理及以上领导。加入这个项目时，该项目已经开展近半年了。
+				为了着手重构这个项目，不得不重头开始梳理之前的所有业务需求，了解已实现的功能去寻找代价最小同时便于维护的替代方案。
+				在充分了解了需求和功能点之后，确定了新的技术方案和项目架构。技术上主要用到react、redux、sass和d3,按照单页应用的标准来
+				重构这个项目。d3用于实现之前用第三方库实现的图表组件，其中有饼状统计图、柱状统计图、树形组织结构图和组件可拖拽功能等。
+				在代码组织上，按照功能划分大小组件并按目录区分，尽可能控制单个文件的代码量，使查找和定位代码变得高效，提高可维护性和可扩展性。
+				删除不必要的第三方依赖库，特别是第三方的ui库。在个性化的ui交互面前，使用第三方ui库往往得不偿失。由于某些原因，该项目并没有做
+				模块化和代码分割并按需加载。即便如此，这已经让整个项目比之前有了极大提升，总体代码体积比之前减少60%左右，页面加载也不再拖后腿，
+				项目的开展也越来越顺利，无论是改bug还是实现新的需求都能高效地完成。
+				<!-- .element: style="font-size:22px;" -->
+			</script>
+		</section>
+		<section data-markdown style="text-align: left">
+			<script type="text/template">
+				3.WeLink移动应用 <!-- .element: style="font-size:24px;" -->
+
+				WeLink是华为自己打造的基于web技术的移动端轻应用平台。但是该项目并不那么单纯，客户方希望一套代码能同时在android、ios和WeLink三个
+				平台上实现统一的UI交互和业务功能。唯一让人欣慰的是：这是一个全新的项目，没有历史包袱。在了解了WeLink平台的打包要求和其提供的一些api之后，
+				开始搭建项目框架，用到的技术为react、redux、less和d3。在该项目中，d3除了制作各种图表还大量应用于数据和时间的格式化。
+				模块化、代码分割和按需加载在该项目中得到充分运用，基本就是按需求划分模块，每个模块打包成单独的js以便按需加载。为了实现三端的行为统一，
+				遇到的第一个难题就是页面跳转和返回，为了让这些功能与平台无关，自己实现通过hash定位模块和页面，自建页面历史栈，自定义前进和返回方法。
+				第二个难题可能就是分享了，为了让查看分享链接进来看到的内容与分享出去时的页面内容是一样的，这让那些在业务上依赖其上一个或上上个页面数据的
+				页面分享之后，再通过分享链接直接进到该页面还能看到分享出去时同样的内容变得很麻烦。这种情况实在想不出太理想的解决方案，只能一方面附加一些
+				关键的数据到分享链接上，一方面通过关键数据重新查出不能附加的数据，从而还原分享时的页面。经过这个项目的实战，让我对状态管理和页面路由有了
+				更深刻的认识，令我对打造更优秀的react前端项目更有信心。
+				<!-- .element: style="font-size:22px;" -->
+
+				### 个人总结 <!-- .element: style="font-size:30px;" -->
+
+				1.对开发颇有热情，能专注于开发工作。 <!-- .element: style="font-size:24px;" -->
+
+				2.对流行的优秀技术十分关注，包括html5、css3、es6等技术规范和优秀的js库如d3等，但不限于web技术 。
+				<!-- .element: style="font-size:24px;" -->
+
+				3.在html、css、js三大前端语言方面都没有明显的短板，能很好的将这三者结合运用。
+				<!-- .element: style="font-size:24px;" -->
+
+				4.个人严重偏好react框架，虽然也能熟练运用vue,但不太想说太多。	<!-- .element: style="font-size:24px;" -->
+
+				5.一句话技术总结：一流的前端，二流后端，三流的运维	<!-- .element: style="font-size:24px;" -->
+			</script>
+		</section>
+	</div>
+</div>
+
+<script src="../lib/js/head.min.js"></script>
+<script src="../js/reveal.js"></script>
+
+<script>
+	Reveal.initialize({
+		width: 1200,
+		height: 900,
+		// Factor of the display size that should remain empty around the content
+		margin: 0.001,
+		// Bounds for smallest/largest possible scale to apply to content
+		minScale: 1,
+		maxScale: 1,
+		transitionSpeed: 'fast',
+		dependencies: [
+			{ src: '../plugin/math/math.js', async: true },
+			{ src: '../plugin/markdown/marked.js' },
+			{ src: '../plugin/markdown/markdown.js' },
+			{ src: '../plugin/notes/notes.js', async: true },
+			{ src: '../plugin/highlight/highlight.js',
+				async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+		]
+	});
+</script>
+</body>
 </html>
