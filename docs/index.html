@@ -25,49 +25,48 @@
 
 		<section data-markdown style="text-align: left">
 			<script type="text/template">
-				### 基本信息 <!-- .element: style="font-size:30px;" -->
-				男 ，29岁，本科(2015年毕业)，工作4年 ，现在深圳 <!-- .element: style="font-size:24px;" -->
+				### 基本信息 <!-- .element: style="font-size:26px;" -->
+				男 ，29岁，本科(2015年毕业)，工作4年 ，现在深圳 <!-- .element: style="font-size:20px;" -->
 
-				专业/院校：信息与计算科学/湖北理工学院 <!-- .element: style="font-size:24px;" -->
+				专业/院校：信息与计算科学/湖北理工学院 <!-- .element: style="font-size:20px;" -->
 
-				手机/邮箱：15172037122/1066761470@qq.com <!-- .element: style="font-size:24px;" -->
+				手机/邮箱：15172037122/1066761470@qq.com <!-- .element: style="font-size:20px;" -->
 
-				### 工作经历 <!-- .element: style="font-size:30px;" -->
-				2014年下半入职一家小型网络公司(赐云网络有限公司)，正式开始个人的职业开发生涯。
+				### 工作经历 <!-- .element: style="font-size:26px;" -->
+
+				2014年下半年入职一家小型网络公司(赐云网络有限公司)，正式开始个人的职业开发生涯。
 				和多数刚刚进入开发行业的新人一样，用jquery开发着各种简单的页面，并尝试着各种js库，如kissy、echarts等。
 				渐渐地由懵懂到清晰，从而确定了个人的职业发展方向，于2015年8月离开上海来到深圳。
-				<!-- .element: style="font-size:22px;" -->
+				<!-- .element: style="font-size:18px;" -->
 
 				来到深圳后于当年10月份进入一家初创型公司(天行家科技有限公司)，公司前期发展还不错。
 				当时一边用传统的jquery开发网站，一边了解react.js(这也是个人最喜欢的前端框架)，
 				并在部分移动端页面进行了一些试用，效果很理想。于是后来用react重构了公司的客服管理系统，
 				并开发了一个公司数据展示平台，通过这些实践让我对react有了较深认识。后来公司发展遇到瓶颈，
-				于是我与2017年5月离开这家公司。<!-- .element: style="font-size:22px;" -->
+				于是我于2017年5月离开这家公司。<!-- .element: style="font-size:18px;" -->
 
-				当年6月进入了中软国际(华为外包)，值得庆幸的是这是一个基于react的前端项目，不幸的是这是一个对react并没有多少经验的新手写的。
+				当年6月进入了中软国际(华为外包)。值得庆幸的是，接手的第一个项目是基于react的；不幸的是，这是一个对react并没有多少经验的新手写的。
 				随着业务需求的增加和代码量的增长，这个项目的代码已经难以维护，更别谈扩展。这种情况下重构已经是唯一的选择，但由于交付的压力，
-				最后项目经理只能给我一个月的时间。虽然说这一个月的重构任务有点紧张也很很辛苦，但在技术上也得到丰厚的回报，运用react更加得心应手，
-				能基于react技术栈设计满足复杂业务需求的前端项目架构。后来在另一个移动端项目中更是充分利用之前的技术积累，设计出能同时满足再多
-				环境中交互和ui比较统一的移动项目架构。<!-- .element: style="font-size:22px;" -->
-			</script>
-		</section>
-		<section data-markdown style="text-align: left">
-			<script type="text/template">
-				### 项目经验 <!-- .element: style="font-size:30px;" -->
-				第一年的基于jquery的传统页面开发经验，在当下的前端环境下实在不值一提，这里就主要讲讲基于react的三个项目。
-			  开发环境: IDE(WebStorm),打包(webpack),编译(babel),热加载调试(webpack-dev-server)
-				<!-- .element: style="font-size:24px;" -->
+				最后项目经理只能给我一个月的时间。虽然说这一个月的重构任务有点紧张也很辛苦，但在技术上的收获也是丰厚的。运用react更加得心应手，
+				能基于react技术栈设计满足复杂业务需求的前端项目架构。后来在另一个移动端项目中更是充分利用之前的技术积累，设计出能满足多
+				环境中交互和ui比较统一的移动项目架构。<!-- .element: style="font-size:18px;" -->
 
-				1.客服管理系统 <!-- .element: style="font-size:24px;" -->
+				### 项目经验 <!-- .element: style="font-size:26px;" -->
+				第一年基本属于jquery的传统页面开发经验。在当下的前端环境下，这些经验实在不值一提，这里就主要讲讲基于react的三个项目。
+				<!-- .element: style="font-size:20px;" -->
+			  开发环境: IDE(WebStorm),打包(webpack),编译(babel),热加载调试(webpack-dev-server)
+				<!-- .element: style="font-size:20px;" -->
+
+				1.客服管理系统 <!-- .element: style="font-size:22px;" -->
 
 				顾名思义，这是公司内部客服人员使用的一个系统，以便提供给客户更好的服务。这个我的第一个基于react的项目，
 				现在看来这项目做得还是很粗糙的。该项目中组件化做得很不理想，组件的划分很多不是很合理，可重用度不高。
 				其次没用到redux这样的状态管理库，组件间的数据传递和方法调用完全是基于props的逐级传递和ref引用来实现的，
 				使得数据处理和方法调用变得混乱而复杂。最后页面的跳转严重依赖react-router这个库，使得在实现跳转逻辑时
 				难以做到灵活可控。经过对这个项目的反思，让我清晰的认识到自己的很多不足之处，从而给我指明了今后学习和工作的方向。
-				<!-- .element: style="font-size:22px;" -->
+				<!-- .element: style="font-size:18px;" -->
 
-				2.Plink项目管理平台 <!-- .element: style="font-size:24px;" -->
+				2.Plink项目管理平台 <!-- .element: style="font-size:22px;" -->
 
 				很显然，这是一个用于管理公司项目用的，主要使用者是公司的项目经理及以上领导。加入这个项目时，该项目已经开展近半年了。
 				为了着手重构这个项目，不得不重头开始梳理之前的所有业务需求，了解已实现的功能去寻找代价最小同时便于维护的替代方案。
@@ -77,12 +76,9 @@
 				删除不必要的第三方依赖库，特别是第三方的ui库。在个性化的ui交互面前，使用第三方ui库往往得不偿失。由于某些原因，该项目并没有做
 				模块化和代码分割并按需加载。即便如此，这已经让整个项目比之前有了极大提升，总体代码体积比之前减少60%左右，页面加载也不再拖后腿，
 				项目的开展也越来越顺利，无论是改bug还是实现新的需求都能高效地完成。
-				<!-- .element: style="font-size:22px;" -->
-			</script>
-		</section>
-		<section data-markdown style="text-align: left">
-			<script type="text/template">
-				3.WeLink移动应用 <!-- .element: style="font-size:24px;" -->
+				<!-- .element: style="font-size:18px;" -->
+
+				3.WeLink移动应用 <!-- .element: style="font-size:22px;" -->
 
 				WeLink是华为自己打造的基于web技术的移动端轻应用平台。但是该项目并不那么单纯，客户方希望一套代码能同时在android、ios和WeLink三个
 				平台上实现统一的UI交互和业务功能。唯一让人欣慰的是：这是一个全新的项目，没有历史包袱。在了解了WeLink平台的打包要求和其提供的一些api之后，
@@ -93,25 +89,30 @@
 				页面分享之后，再通过分享链接直接进到该页面还能看到分享出去时同样的内容变得很麻烦。这种情况实在想不出太理想的解决方案，只能一方面附加一些
 				关键的数据到分享链接上，一方面通过关键数据重新查出不能附加的数据，从而还原分享时的页面。经过这个项目的实战，让我对状态管理和页面路由有了
 				更深刻的认识，令我对打造更优秀的react前端项目更有信心。
-				<!-- .element: style="font-size:22px;" -->
+				<!-- .element: style="font-size:18px;" -->
 
-				### 个人总结 <!-- .element: style="font-size:30px;" -->
+				### 个人总结 <!-- .element: style="font-size:26px;" -->
 
-				1.对开发颇有热情，能专注于开发工作。 <!-- .element: style="font-size:24px;" -->
+				1.对开发颇有热情，能专注于开发工作。 <!-- .element: style="font-size:22px;" -->
 
 				2.对流行的优秀技术十分关注，包括html5、css3、es6等技术规范和优秀的js库如d3等，但不限于web技术 。
-				<!-- .element: style="font-size:24px;" -->
+				<!-- .element: style="font-size:22px;" -->
 
 				3.在html、css、js三大前端语言方面都没有明显的短板，能很好的将这三者结合运用。
-				<!-- .element: style="font-size:24px;" -->
+				<!-- .element: style="font-size:22px;" -->
 
-				4.个人严重偏好react框架，虽然也能熟练运用vue,但不太想说太多。	<!-- .element: style="font-size:24px;" -->
+				4.个人严重偏好react框架，虽然也能熟练运用vue,但不想说太多。	<!-- .element: style="font-size:22px;" -->
 
-				5.一句话技术总结：一流的前端，二流后端，三流的运维	<!-- .element: style="font-size:24px;" -->
+				5.一句话技术总结：一流的前端，二流后端，三流的运维	<!-- .element: style="font-size:22px;" -->
 			</script>
 		</section>
 	</div>
 </div>
+
+<!--</script>
+</section>
+<section data-markdown style="text-align: left">
+	<script type="text/template">-->
 
 <script src="../lib/js/head.min.js"></script>
 <script src="../js/reveal.js"></script>
@@ -119,7 +120,7 @@
 <script>
 	Reveal.initialize({
 		width: 1200,
-		height: 900,
+		height: 1000,
 		// Factor of the display size that should remain empty around the content
 		margin: 0.001,
 		// Bounds for smallest/largest possible scale to apply to content
