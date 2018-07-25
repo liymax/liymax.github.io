@@ -6,3 +6,5 @@ cheap-module-eval-source-map
 cheap-module-source-map
 
 https://marklodato.github.io/visual-git-guide/index-zh-cn.html
+
+https://blog.csdn.net/csdnnews/article/details/81187618 简历模板
