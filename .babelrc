@@ -12,7 +12,6 @@
   ],
 
   "plugins": [
-    "babel-plugin-styled-components",
     "transform-decorators-legacy",
     ["transform-runtime", {
       "helpers": false,
