@@ -1,22 +1,26 @@
 {
   "presets": [
-    ["env", {
-      "targets": {
-        "browsers": ["last 3 versions", "safari >= 7"]
+    [
+      "env",{
+      "targets":{
+        "browsers": ["last 2 versions", "> 1%"]
       }
-    }],
+    }
+    ],
     "react",
     "stage-0"
   ],
+
   "plugins": [
-    "react-hot-loader/babel",
-    "transform-class-properties",
-    "syntax-dynamic-import",
+    "babel-plugin-styled-components",
+    "transform-decorators-legacy",
     ["transform-runtime", {
       "helpers": false,
       "polyfill": false,
       "regenerator": true,
       "moduleName": "babel-runtime"
-    }]
+    }],
+    "react-hot-loader/babel",
+    "transform-async-to-generator"
   ]
 }
