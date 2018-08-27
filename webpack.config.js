@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const htmlWebpackPlugin = require("html-webpack-plugin");
-const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 const base = {
 	resolve: {
 		modules: [
@@ -46,7 +45,6 @@ module.exports=Object.assign({
 			inject: "body",
 			chunks: ["vendor","game"]
 		}),
-		new OpenBrowserPlugin({ url: 'http://localhost:9001' })
 	]
 },base);
 
