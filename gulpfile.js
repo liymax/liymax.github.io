@@ -1,16 +1,12 @@
-let gulp = require('gulp');
-let git = require('gulp-git');
+const gulp = require('gulp');
+const fs =require("fs");
 
-
-let gitPaths=['./index.html','./dist/*','./src/*'];
-gulp.task('add', function(){
-	return gulp.src(gitPaths).pipe(git.add());
+let browserSync = require('browser-sync').create();
+let reload = browserSync.reload;
+gulp.task('browser-sync', function(done){
+	browserSync.init({
+		proxy: "127.0.0.1:9001"
+	});
+	gulp.watch('./dist/*.js').on('change', reload);
+	done();
 });
-
-gulp.task('commit', function(){
-	return gulp.src(gitPaths).pipe(git.commit(undefined, {
-			args: '-m "auto commit"',
-			disableMessageRequirement: true
-		}));
-});
-
