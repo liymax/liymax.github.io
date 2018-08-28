@@ -1,10 +1,11 @@
 import React from 'react';
 import Phaser from "phaser";
 
-
-import InitScene from "../scenes/init";
-import Empty from "../scenes/empty";
-import First from "../scenes/first";
+import Test1 from "../scenes/test1";
+import Test2 from "../scenes/test2";
+import Test3 from "../scenes/test3";
+import Test4 from "../scenes/test4";
+import AfterLoad from "../scenes/after_load_scene";
 export default class extends React.Component {
 	constructor(props) {
 		super(props);
@@ -18,15 +19,16 @@ export default class extends React.Component {
 			physics: {
 				default: 'arcade',
 				arcade: {
-					gravity: { y: 100 }
+					//gravity: { y: 100 }
 				}
 			},
-			scene:[Empty,InitScene]
+			scene:[Test4,Test3,Test2,Test1]
 		};
 	}
 
 	componentDidMount(){
 		const game = new Phaser.Game(this.config);
+		//game.scene.add('load', AfterLoad, true, { x: 400, y: 300 });
 	}
 
 	render() {
