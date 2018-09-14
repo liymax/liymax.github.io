@@ -1,4 +1,3 @@
-
 (function() {
     class Dispatch {
         constructor() {
@@ -9,11 +8,18 @@
             cbList.push(cb);
             this.events[eventname] = cbList;
         }
+        off(eventname, cb) {
+            let cbList = this.events[eventname] || [];
+            this.events[eventname] = [];
+            if (cb) {
+                this.events[eventname] = cbList.filter(e=>e !== cb)
+            }
+        }
         emit(eventname, ...args) {
             let cbList = this.events[eventname] || [];
             if (cbList.length === 0) {
-                let errMsg = eventname + ' is not a subscription,or its callback not exist';
-                throw new Error(errMsg);
+                let warning = eventname + ' is not a subscription,or its callback not exist';
+                console.warn(warning);
             } else {
                 cbList.forEach(fn=>{
                     if ("function" === typeof fn) {
@@ -28,11 +34,18 @@
 
         }
     }
+
     let dispatcher = new Dispatch();
     dispatcher.on("hello", (name)=>{
         console.log("hello", name);
     }
     );
+
+    function hi(name){
+        console.log("hi", name);
+    }
+    dispatcher.on("hello",hi );
+    dispatcher.off('hello', hi);
     setTimeout(()=>{
         dispatcher.emit('hello', 'scott');
     }
