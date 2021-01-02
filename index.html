@@ -3,11 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>github page</title>
-    <script>
-        window.location.href = '/public/dist/index.html'
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        showProcessingMessages: false, //关闭js加载过程信息
+        messageStyle: 'none', //不显示信息
+        jax: ['input/TeX', 'output/HTML-CSS'],
+        tex2jax: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']], //行内公式选择符
+          displayMath: [['$$', '$$'], ['\\[', '\\]']], //段内公式选择符
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'a'] //避开某些标签
+        },
+        'HTML-CSS': {
+          availableFonts: ['STIX', 'TeX'], //可选字体
+          showMathMenu: false //关闭右击菜单显示
+        }
+      })
     </script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </head>
 <body>
+   $$\phi=\frac{1}{2}(1+\sqrt5),\overline\phi=\frac{1}{2}(1-\sqrt5)$$
+
+$$F_0=0;F_1=1;F_{n+2}=F_{n+1}+F_n,\quad n \ge0 \qquad\qquad\qquad (2)$$
+
+$$\phi^{n-2}\le F_n\le \phi^{n-1}$$
+
+$$F_{n+1}F_{n-1}-F_n^2=(-1)^n$$
+
+$$F_{n-1}(F_n+F_{n-1})-F_n^2=F_{n-1}^2-F_nF_{n-2}$$
+
+$$F_{n+m}=F_mF_{n+1}+F_{m-1}F_n$$
+
+$$gcd(F_m,F_n)=F_{gcd(m,n)}$$
+
+$$G(z)=\frac{z}{1-z-z^2}$$
+
+$$G(z)=\frac{1}{\sqrt5}(\frac{1}{1-\phi z}-\frac{1}{1-\overline\phi z})$$
+
+$$F_n=\frac{1}{\sqrt5}(\phi^n-\overline\phi^n)$$
+
+$$\sum\limits_{k=0}^nF_nF_{n-k}=\frac{1}{5}(n-1)F_n+\frac{2}{5}nF_{n-1}$$
+
+$$a_0=0,a_1=1;a_{n+2}=a_{n+1}+a_n+\binom{n}{m}$$
+
+$$a_{m+1}=a_m+a_{m-1}+\binom{m-1}{m}=a_m+a_{m-1}=F_{m+1}$$
+
+$$a_{m+2}=a_{m+1}+a_m+\binom{m}{m}=\qquad F_{m+1}+F_m+1$$
+
+$$a_{m+3}=a_{m+2}+a_{m+1}+\binom{m+1}{m}=2F_{m+1}+F_m+1+\binom{m+1}{m}$$
+
+$$a_{m+4}=a_{m+3}+a_{m+2}+\binom{m+2}{m}=3F_{m+1}+2F_m+2\binom{m}{m}+\binom{m+1}{m}+\binom{m+2}{m}$$
+
+$$a_{m+5}=a_{m+4}+a_{m+3}+\binom{m+3}{m}=5F_{m+1}+3F_m+3\binom{m}{m}+2\binom{m+1}{m}+\binom{m+2}{m}+\binom{m+3}{m}$$
+
+$$a_n=F_{n-m}F_{m+1}+F_{n-m-1}F_m+\sum\limits_{k=m}^{n-2}F_{n-k-1}\binom{k}{m}, \quad n\ge m+2$$
+
+$$a_n=\begin{cases}\begin{align}F_n,\quad n\le m+1 \\ F_{n-m}F_{m+1}+F_{n-m-1}F_m+\sum\limits_{k=m}^{n-2}F_{n-k-1}\binom{k}{m}, \quad n\ge m+2 \end{align}\end{cases}$$
+
 
 </body>
 </html>
