@@ -81,5 +81,20 @@
       \\ &=F_n+x(a_n-F_n)+y(b_n-F_n) \\ &=xa_n+yb_n-(x+y-1)F_n
       \end{align}$</p>
   </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/sw-demo.js', { scope: '/' }).then(function(reg) {
+            if(reg.installing) {
+              console.log('Service worker installing');
+            } else if(reg.waiting) {
+              console.log('Service worker installed');
+            } else if(reg.active) {
+              console.log('Service worker active');
+            }
+          }).catch(function(error) {
+            console.log('Registration failed with ' + error);
+          });
+        }
+    </script>
 </body>
 </html>
