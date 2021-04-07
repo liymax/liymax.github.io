@@ -1,7 +1,7 @@
 self.addEventListener('fetch', function(event) {
   const { url } = event.request
-  
-  if (url.indexOf('sw-hello.js') !== -1) {
+  console.log(url)
+  if (url.includes('sw-hello')) {
     console.log(url)
     return new Response('<script>console.log("hello service worker")</script>', {
       headers: { 'Content-Type': 'application/javascript' }
