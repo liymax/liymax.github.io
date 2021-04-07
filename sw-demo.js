@@ -6,7 +6,7 @@ self.addEventListener('fetch', function(event) {
         status: 200,
         headers: { 'Content-Type': 'application/javascript' }
       })*/
-      const localReq = new Request('http://localhost:3005/hello.js')
+      const localReq = new Request('http://localhost:3005/sw-hello.js')
       return fetch(localReq).then(function (response) {
         return response
       }).catch(function (err) {
