@@ -2,7 +2,7 @@ self.addEventListener('fetch', function(event) {
   const { url } = event.request
   if (url.includes('sw-hello.js')) {
     console.log(url)
-    event.respondWith(new Response('<script>console.log("hello service worker")</script>', {
+    event.respondWith(new Response('console.log("hello service worker")', {
       status: 200,
       headers: { 'Content-Type': 'application/javascript' }
     }))
