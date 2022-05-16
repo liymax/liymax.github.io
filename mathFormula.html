@@ -1,1 +1,102 @@
-hrll
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>github page</title>
+    <script>
+      MathJax = {
+        showProcessingMessages: false, //关闭js加载过程信息
+        messageStyle: 'none', //不显示信息
+        tex: {
+          inlineMath: [['$', '$']], //行内公式选择符
+          tags: 'ams'
+        }
+      }
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+     <style>
+      div{
+        padding-left: 50px;
+      }
+      p {
+        padding: 15px 0;
+      }
+    </style>
+</head>
+<body>
+<div>
+    <p>$\phi=\frac{1}{2}(1+\sqrt5),\bar\phi=\frac{1}{2}(1-\sqrt5)$</p>
+
+    <p>$F_0=0;F_1=1;F_{n+2}=F_{n+1}+F_n,\quad n \ge0$</p>
+
+    <p>$\phi^{n-2}\le F_n\le \phi^{n-1}$</p>
+
+    <p>$F_{n+1}F_{n-1}-F_n^2=(-1)^n$</p>
+
+    <p>$F_{n-1}(F_n+F_{n-1})-F_n^2=F_{n-1}^2-F_nF_{n-2}$</p>
+
+    <p>$F_{n+m}=F_mF_{n+1}+F_{m-1}F_n$</p>
+
+    <p>$gcd(F_m,F_n)=F_{gcd(m,n)}$</p>
+
+    <p>$G(z)=\frac{z}{1-z-z^2}$</p>
+
+    <p>$G(z)=\frac{1}{\sqrt5}(\frac{1}{1-\phi z}-\frac{1}{1-\bar\phi z})$</p>
+
+    <p>$F_n=\frac{1}{\sqrt5}(\phi^n-\bar\phi^n)$</p>
+
+    <p>$\sum\limits_{k=0}^nF_nF_{n-k}=\frac{1}{5}(n-1)F_n+\frac{2}{5}nF_{n-1}$</p>
+
+    <p>$a_0=0,a_1=1;a_{n+2}=a_{n+1}+a_n+\binom{n}{m}$</p>
+
+    <p>$a_{m+1}=a_m+a_{m-1}+\binom{m-1}{m}=a_m+a_{m-1}=F_{m+1}$</p>
+
+    <p>$a_{m+2}=a_{m+1}+a_m+\binom{m}{m}=\qquad F_{m+1}+F_m+1$</p>
+
+    <p>$a_{m+3}=a_{m+2}+a_{m+1}+\binom{m+1}{m}=2F_{m+1}+F_m+1+\binom{m+1}{m}$</p>
+
+    <p>$a_{m+4}=a_{m+3}+a_{m+2}+\binom{m+2}{m}=3F_{m+1}+2F_m+2\binom{m}{m}+\binom{m+1}{m}+\binom{m+2}{m}$</p>
+
+    <p>$a_{m+5}=a_{m+4}+a_{m+3}+\binom{m+3}{m}=5F_{m+1}+3F_m+3\binom{m}{m}+2\binom{m+1}{m}+\binom{m+2}{m}+\binom{m+3}{m}$</p>
+
+    <p>$a_n=F_{n-m}F_{m+1}+F_{n-m-1}F_m+\sum\limits_{k=m}^{n-2}F_{n-k-1}\binom{k}{m}, \quad n\ge m+2$</p>
+
+    <p>$a_n=\begin{cases}\begin{align}F_n,\quad n\le m+1 \\ F_{n-m}F_{m+1}+F_{n-m-1}F_m+\sum\limits_{k=m}^{n-2}F_{n-k-1}\binom{k}{m}, \quad n\ge m+2 \end{align}\end{cases}$</p>
+
+    <p>$a_0=0,a_1=1;a_{n+2}=a_{n+1}+a_n+f(n)$</p>
+
+    <p>$a_2=\qquad\qquad\qquad\qquad a_1+a_0+f(0)$</p>
+
+    <p>$a_3=a_2+a_1+f(1)=2a_1+a_0+f(0)+f(1)$</p>
+
+    <p>$a_4=a_3+a_2+f(2)=3a_1+2a_0+2f(0)+f(1)+f(2)$</p>
+
+    <p>$a_n=F_n+\sum\limits_{k=0}^{n-1}F_{n-k-1}f(k)$</p>
+
+    <p>$b_n=F_n+\sum\limits_{k=0}^{n-1}F_{n-k-1}g(k)$</p>
+
+    <p>$\begin{align}
+      c_n &=F_n+\sum\limits_{k=0}^{n-1}F_{n-k-1}(xf(k)+yg(k))
+      \\ &= F_n+x\sum\limits_{k=0}^{n-1}F_{n-k-1}f(k)+y\sum\limits_{k=0}^{n-1}F_{n-k-1}g(k)
+      \\ &=F_n+x(a_n-F_n)+y(b_n-F_n) \\ &=xa_n+yb_n-(x+y-1)F_n
+      \end{align}$</p>
+  </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('sw-demo.js', { scope: '/' }).then(function(reg) {
+            if(reg.installing) {
+              console.log('Service worker installing');
+            } else if(reg.waiting) {
+              console.log('Service worker installed');
+            } else if(reg.active) {
+              console.log('Service worker active');
+            }
+          }).catch(function(error) {
+            console.log('Registration failed with ' + error);
+          });
+        }
+    </script>
+    <script src="/sw-hello.js"></script>
+</body>
+</html>
+
